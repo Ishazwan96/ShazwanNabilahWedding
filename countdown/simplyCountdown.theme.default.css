@@ -1,0 +1,44 @@
+.simply-countdown{
+    overflow:hidden;
+    display:table;
+    margin:auto;
+}
+    .simply-countdown > .simply-section {
+        width: 100px; /* Increased width for better spacing */
+        height: 100px; /* Increased height for better spacing */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        background: #fff5;
+        float:left;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slightly increased shadow */
+        transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+    .simply-countdown > .simply-section:hover {
+        transform: scale(1.1); /* Scale up on hover */
+    }
+    
+    .simply-countdown > .simply-section .simply-amount,
+    .simply-countdown > .simply-section .simply-word {
+        display: block;
+        text-align: center;
+        color: #fff; /* White text color */
+    }
+    
+    .simply-countdown > .simply-section .simply-amount {
+        font-size: 2rem; /* Increased font size for amount */
+        font-weight: bold; /* Bold for emphasis */
+    }
+    
+    .simply-countdown > .simply-section .simply-word {
+        font-size: 0.8rem; /* Decreased font size for word */
+        text-transform: uppercase; /* Uppercase text */
+        letter-spacing: 1px; /* Increased letter spacing */
+    }
+    
+    /* Optional: Add a hover effect to change background color */
+    .simply-countdown > .simply-section:hover {
+        background: #333; /* Darken background color on hover */
+    }
