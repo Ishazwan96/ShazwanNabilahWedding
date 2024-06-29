@@ -419,7 +419,7 @@
 
     </audio>
     <div class="audio-icon-wrapper" style="display: none;">
-        <i class="bi bi-play-circle"></i>
+        <i class="bi bi-pause-circle"></i>
     </div>
 </div>
 <!-- Lagu End -->
@@ -480,14 +480,14 @@ playAudio();
     if (isPlaying) {
 
     song.pause();
-    audioIcon.classList.remove('bi-play-circle');
-    audioIcon.classList.add('bi-pause-circle');
+    audioIcon.classList.remove('bi-pause-circle');
+    audioIcon.classList.add('bi-play-circle');
 
     } else {
 
     song.play();
-    audioIcon.classList.add('bi-play-circle');
-    audioIcon.classList.remove('bi-pause-circle');
+    audioIcon.classList.add('bi-pause-circle');
+    audioIcon.classList.remove('bi-play-circle');
     }
 
     isPlaying = !isPlaying;
