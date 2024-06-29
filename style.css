@@ -337,9 +337,9 @@ float: right;
     padding-bottom: 8rem;
 }
 .rsvp h2 {
-font-family: 'sacramento', cursive;
-font-size: 5rem;
-color:#ca9a5b;
+    font-family: 'sacramento', cursive;
+    font-size: 5rem;
+    color:#ca9a5b;
 }
 .rsvp p {
     font-size: 1rem;
@@ -353,18 +353,23 @@ color:#ca9a5b;
     color: #ccc;
 }
 .rsvp button {
-    background-color: var(--color);
+    background-color: #ca9a5b;
+    border: 1px solid #ca9a5b;
     color: #fff;
-    border: 1px solid var(--color);
 }
 .rsvp button:hover {
     background-color: #4e4e4e;
     border: 1px solid #4e4e4e;
+    color: #fff;
 }
 .gifts {
+    position: relative; /* Ensure the container is positioned relative for absolute positioning */
     padding-top: 10rem;
     padding-bottom: 8rem;
-    background-color: var(--bg);
+    background-image: url(img/14.jpg);
+    background-size: cover;
+    overflow: hidden; /* Hide overflow to prevent blurred image from extending beyond section */
+    z-index: -1; /* Ensure the pseudo-element stays behind the content */
 }
 .gifts h2 {
     font-family: 'sacramento', cursive;
@@ -378,12 +383,18 @@ color:#ca9a5b;
  }
  .gifts span {
     text-transform: uppercase;
-    color: #4e4e4e;
+    color: #ccc;
     font-size: 0.9rem;
     letter-spacing: 1px;
     display: block;
     margin-bottom: 1rem;
 }
+.gifts .list-group {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .gallery h2 {
     font-family: 'sacramento', cursive;
     font-size: 5rem;
@@ -412,22 +423,85 @@ color:#ca9a5b;
 }
 footer {
     padding: 3rem;
-    background-color: #db9209;
+    background-color: #ca9a5b;
     color: var(--bg);
 }
+
 footer a {
     color: var(--bg);
     font-weight: bold;
     text-decoration: none;
 }
+
 footer a:hover {
     color: #ccc;
 }
-footer li {
+
+footer ul {
     list-style: none;
-    display: inline;
-    margin: 0.5rem;
+    padding: 0; /* Remove default padding */
 }
+
+footer li {
+    display: inline-block; /* Display list items inline */
+    margin: 0.5rem;
+    
+}
+footer ul li i {
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: #333;
+}
+footer ul li i:hover {
+    color: #ccc;
+}
+
+/* Ensure the .col.text-center container aligns center horizontally */
+.col.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align center horizontally */
+    text-align: center; /* Align text center horizontally */
+}
+
+/* Ensure the .nav-link items align from right to left */
+.col.text-center .nav-link {
+    margin-left: 20px; /* Adjust spacing between links */
+    color: #333; /* Customize link color */
+}
+.col.text-center .nav-link:hover {
+    color: #ccc; /* Customize link color */
+}
+
+/* Audio */
+.audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: #ccc;
+    opacity: 50%;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+ @keyframes rotating {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+ }
+
+
 
 
 /* Media Query */
@@ -538,7 +612,9 @@ footer li {
         display: block;
         margin: 0 auto; /* Center horizontally */
         text-align: center; /* Ensure text inside button is centered */
+        margin-top: -2rem;
     }
+
 }
 /* Media Query for Mobile */
 @media (max-width:576px) {
