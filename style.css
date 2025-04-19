@@ -658,9 +658,8 @@ footer ul li i:hover {
         top: 31px;
     }
 }
-.info .map {
+.contact .row .map {
     flex: 1 1 45rem;
     width: 100%;
     object-fit: cover;
-    height: 50%; /* or 80% at 992px breakpoint */
-}
+  }
